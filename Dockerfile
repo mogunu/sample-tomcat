@@ -9,6 +9,7 @@ RUN wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-
 RUN cd /tmp; tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.73/* /opt/tomcat/
 RUN rm -rf /opt/tomcat/webapps/*
+RUN chmod 777 -R /opt/tomcat/
 
 EXPOSE 8080
 # java
